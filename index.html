@@ -12,65 +12,73 @@
 
 body{
   margin:0;
-  min-height:100vh;
-  background:linear-gradient(135deg,#ffffff,#f3f3f3,#e8e8e8);
   font-family:'Poppins',sans-serif;
+  background:linear-gradient(135deg,#fff,#f3f3f3,#e8e8e8);
+  overflow:hidden;
+  color:#444;
+}
+
+/* Slides */
+.slide{
+  position:absolute;
+  width:100%;
+  height:100vh;
   display:flex;
   justify-content:center;
   align-items:center;
+  opacity:0;
+  pointer-events:none;
+  transition:1s;
   padding:20px;
-  overflow:hidden;
-  color:#444;
-  animation:glowBg 6s infinite alternate;
+}
+.slide.active{
+  opacity:1;
+  pointer-events:auto;
 }
 
-@keyframes glowBg{
-  from{background:linear-gradient(135deg,#ffffff,#f3f3f3,#e8e8e8);}
-  to{background:linear-gradient(135deg,#fffafc,#f9f0ff,#f0f7ff);}
-}
-
-/* CARD */
+/* Card */
 .card{
   width:100%;
-  max-width:700px;
-  max-height:92vh;
-  overflow-y:auto;
-  background:rgba(255,255,255,.97);
-  border-radius:35px;
-  padding:50px 35px;
+  max-width:650px;
+  background:white;
+  border-radius:30px;
+  padding:40px 30px;
   text-align:center;
   box-shadow:0 25px 80px rgba(0,0,0,.15);
-  position:relative;
-  z-index:2;
+  animation:fadeIn 1s ease;
+}
+
+@keyframes fadeIn{
+  from{transform:translateY(30px);opacity:0;}
+  to{transform:translateY(0);opacity:1;}
 }
 
 h1{
-  font-size:2.3em;
+  font-size:2em;
   color:#6b4f4f;
 }
 
 .big{
-  font-size:1.15em;
-  line-height:1.9;
+  font-size:1.1em;
+  line-height:1.8;
   margin-top:20px;
 }
 
 .name{
   color:#8b5e5e;
   font-weight:700;
-  text-shadow:0 0 8px rgba(0,0,0,.08);
 }
 
-/* BUTTON */
+/* Button */
 button{
-  margin-top:30px;
-  padding:15px 45px;
+  margin-top:25px;
+  padding:12px 35px;
   border:none;
-  border-radius:60px;
+  border-radius:50px;
   font-size:1em;
-  cursor:pointer;
   background:#8b5e5e;
   color:white;
+  cursor:pointer;
   transition:.3s;
 }
 
@@ -78,24 +86,22 @@ button:hover{
   transform:scale(1.07);
 }
 
-/* FALLING ITEMS */
-.fall{
+/* Floating Chocolate */
+.float{
   position:fixed;
-  top:-40px;
   font-size:24px;
-  animation:fall linear infinite;
-  pointer-events:none;
-  z-index:1;
+  animation:float 6s linear infinite;
+  opacity:.7;
 }
 
-@keyframes fall{
-  to{transform:translateY(110vh) rotate(360deg);}
+@keyframes float{
+  from{transform:translateY(-10vh);}
+  to{transform:translateY(110vh);}
 }
 
-/* HEART */
+/* Heart */
 #heart{
-  font-size:4.5em;
-  margin-top:15px;
+  font-size:5em;
   animation:beat 1s infinite;
 }
 
@@ -107,101 +113,120 @@ button:hover{
   100%{transform:scale(1);}
 }
 
-/* SPARKLES */
-.spark{
-  position:fixed;
-  width:3px;
-  height:3px;
-  background:#ccc;
-  border-radius:50%;
-  animation:twinkle 2s infinite alternate;
-  z-index:0;
-}
-
-@keyframes twinkle{
-  from{opacity:0.2;}
-  to{opacity:1;}
+/* Typewriter */
+.type{
+  border-right:2px solid #8b5e5e;
+  white-space:pre-wrap;
+  overflow:hidden;
 }
 </style>
 </head>
 
 <body>
 
-<div class="card">
+<!-- Slide 1 -->
+<div class="slide active">
+  <div class="card">
+    <h1>Happy Chocolate Day 🤍🍪</h1>
+    <p class="big">
+      Ritija 💖<br><br>
+      Today is about sweetness…
+      and you are the sweetest part of my life.
+    </p>
+    <button onclick="nextSlide()">Next 🍫</button>
+  </div>
+</div>
 
-<h1>Happy Chocolate Day 🤍🍪</h1>
+<!-- Slide 2 -->
+<div class="slide">
+  <div class="card">
+    <p class="big">
+      I know your favorite chocolate is
+      <span class="name">Hershey’s Cookies & Creme</span> 🤍🍪<br><br>
+      So this one is specially for you.
+    </p>
+    <button onclick="nextSlide()">Next 🤍</button>
+  </div>
+</div>
 
-<p class="big">
-Ritija 💖<br><br>
-Here is your chocolate — your favorite 
-<span class="name">Hershey’s Cookies & Creme</span> 🤍🍪<br><br>
+<!-- Slide 3 Typewriter -->
+<div class="slide">
+  <div class="card">
+    <p id="typeText" class="big type"></p>
+    <button onclick="nextSlide()">Open Surprise 🎁</button>
+  </div>
+</div>
 
-But honestly… this is not just chocolate.<br>
-It’s a tiny reminder of how sweet you make my life.<br><br>
-
-You are softer than white chocolate.<br>
-Sweeter than every cookie piece inside it.<br>
-Warmer than the comfort it gives.<br><br>
-
-Every time I see Cookies & Creme, I smile…<br>
-Because it reminds me of you.<br><br>
-
-You make ordinary days feel special.<br>
-You make simple moments feel magical.<br>
-You make my world brighter just by existing.<br><br>
-
-If sweetness had a name…<br>
-It would probably be <span class="name">Ritija</span>.
-</p>
-
-<button onclick="unwrap()">Unwrap Your Sweetness 🤍</button>
-
-<div id="surprise"></div>
-
+<!-- Slide 4 Final -->
+<div class="slide">
+  <div class="card">
+    <div id="heart">❤️</div>
+    <h1 class="name">Ritija ❤️ Prinsu</h1>
+    <p class="big">
+      You are softer than chocolate,
+      sweeter than cookies,
+      and more special than anything in this world.<br><br>
+      I love you so much 🤍🍪
+    </p>
+  </div>
 </div>
 
 <script>
 
-function unwrap(){
-  document.getElementById("surprise").innerHTML =
-  "<div id='heart'>❤️</div><p class='big'><span class='name'>Ritija ❤️ Prinsu</span><br><br>You are my favorite sweetness.<br><br>More comforting than chocolate.<br>More addictive than cookies.<br>More special than any gift.<br><br>I love you so much.<br><br>Now come here… and share that chocolate with me 😏🍪</p>";
-  rainCookies();
-  rainChoco();
+const slides=document.querySelectorAll(".slide");
+let current=0;
+
+function nextSlide(){
+  slides[current].classList.remove("active");
+  current++;
+  slides[current].classList.add("active");
+
+  if(current===2){
+    startTyping();
+  }
 }
 
-function rainCookies(){
-  setInterval(()=>{
-    const c=document.createElement('div');
-    c.className='fall';
-    c.innerHTML='🍪';
-    c.style.left=Math.random()*100+'vw';
-    c.style.animationDuration=(Math.random()*4+4)+'s';
-    document.body.appendChild(c);
-    setTimeout(()=>c.remove(),8000);
-  },300);
+/* Typewriter message */
+const message =
+`Here is your chocolate, Ritija 🤍🍪
+
+Not just a sweet treat,
+but a small reminder
+that you make my life sweeter every day.
+
+When you smile,
+my heart melts faster than chocolate.
+
+When you laugh,
+everything feels lighter.
+
+You are my favorite sweetness.`;
+
+let i=0;
+
+function startTyping(){
+  const el=document.getElementById("typeText");
+  function type(){
+    if(i<message.length){
+      el.textContent+=message.charAt(i);
+      i++;
+      setTimeout(type,30);
+    }
+  }
+  type();
 }
 
-function rainChoco(){
-  setInterval(()=>{
-    const c=document.createElement('div');
-    c.className='fall';
-    c.innerHTML='🍫';
-    c.style.left=Math.random()*100+'vw';
-    c.style.animationDuration=(Math.random()*4+4)+'s';
-    document.body.appendChild(c);
-    setTimeout(()=>c.remove(),8000);
-  },500);
-}
+/* Floating chocolates */
+setInterval(()=>{
+  const c=document.createElement("div");
+  c.className="float";
+  c.innerHTML=Math.random()>0.5?"🍫":"🍪";
+  c.style.left=Math.random()*100+"vw";
+  c.style.animationDuration=(Math.random()*4+4)+"s";
+  document.body.appendChild(c);
+  setTimeout(()=>c.remove(),8000);
+},400);
 
-/* SPARKLES */
-for(let i=0;i<60;i++){
-  const s=document.createElement('div');
-  s.className='spark';
-  s.style.left=Math.random()*100+'vw';
-  s.style.top=Math.random()*100+'vh';
-  s.style.animationDuration=(Math.random()*3+1)+'s';
-  document.body.appendChild(s);
-}
 </script>
 
 </body>
