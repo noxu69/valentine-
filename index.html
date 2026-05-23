@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Happy 16th Birthday Ritija! 💖</title>
     <style>
-        /* Cute & Sweet Theme Styling */
+        /* Ultra-Cute Soft Pastel Aesthetic */
         * {
             margin: 0;
             padding: 0;
@@ -15,21 +15,22 @@
 
         :root {
             --pink-dark: #ff6b8b;
-            --pink-light: #ffecf1;
+            --pink-medium: #ff8fa3;
+            --pink-light: #fff0f3;
             --pink-accent: #ff4757;
-            --pastel-gold: #ffd32a;
+            --cream: #fffafb;
             --text-dark: #4a4a4a;
         }
 
         body {
-            background: linear-gradient(135deg, #ffeef2 0%, #fff0f5 100%);
+            background: linear-gradient(135deg, #ffeef2 0%, #fff5f7 50%, #fff0f5 100%);
             color: var(--text-dark);
             text-align: center;
             overflow-x: hidden;
-            padding-bottom: 5rem;
+            padding-bottom: 6rem;
         }
 
-        /* Floating Hearts Background Animation */
+        /* Continuous Floating Sparkles & Hearts Background */
         .hearts-container {
             position: fixed;
             top: 0;
@@ -43,9 +44,10 @@
         .heart {
             position: absolute;
             font-size: 1.5rem;
-            color: rgba(255, 107, 139, 0.6);
+            color: rgba(255, 107, 139, 0.5);
             animation: floatUp 6s linear infinite;
             bottom: -50px;
+            user-select: none;
         }
 
         @keyframes floatUp {
@@ -56,124 +58,189 @@
         .container {
             position: relative;
             z-index: 10;
-            max-width: 800px;
+            max-width: 700px;
             margin: 0 auto;
-            padding: 2rem 1rem;
+            padding: 3rem 1rem;
         }
 
-        /* Sweet Header */
+        /* Title Area */
         header h1 {
-            font-size: 3rem;
+            font-size: 3.2rem;
             color: var(--pink-dark);
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.05);
+            text-shadow: 2px 2px 8px rgba(255, 107, 139, 0.2);
             margin-bottom: 0.5rem;
-            animation: pulse 2s infinite alternate;
+            animation: bounceGently 2s infinite alternate;
         }
 
         header h2 {
-            font-size: 1.8rem;
-            color: var(--pink-accent);
-            margin-bottom: 2rem;
+            font-size: 1.6rem;
+            color: var(--pink-medium);
+            margin-bottom: 2.5rem;
+            font-weight: 600;
         }
 
-        @keyframes pulse {
-            0% { transform: scale(1); }
-            100% { transform: scale(1.03); }
+        @keyframes bounceGently {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(-6px); }
         }
 
-        /* Music Player Button Layout */
-        .audio-wrapper {
-            margin-bottom: 2rem;
-        }
-        .music-btn {
-            background: white;
-            border: 2px solid var(--pink-dark);
-            color: var(--pink-dark);
-            padding: 10px 20px;
-            border-radius: 30px;
-            font-weight: bold;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-        }
-        .music-btn:hover {
-            background: var(--pink-dark);
-            color: white;
-        }
-
-        /* Section Cards */
+        /* Premium Aesthetic Section Cards */
         .section-card {
-            background: white;
-            border-radius: 20px;
-            padding: 2rem;
-            margin: 2rem auto;
-            box-shadow: 0 10px 30px rgba(255, 107, 139, 0.15);
-            border: 2px dashed #ffb3c6;
-            max-width: 600px;
-            transition: transform 0.3s;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 24px;
+            padding: 2.5rem 2rem;
+            margin: 2.5rem auto;
+            box-shadow: 0 12px 35px rgba(255, 107, 139, 0.12);
+            border: 2px dashed #ffccd5;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
         }
 
         .section-card:hover {
-            transform: translateY(-5px);
+            transform: translateY(-4px) scale(1.01);
+            box-shadow: 0 16px 40px rgba(255, 107, 139, 0.18);
+        }
+
+        .section-card h3 {
+            color: var(--pink-dark);
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        /* 16 Years Dashboard Stats */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+        .stat-box {
+            background: var(--pink-light);
+            padding: 1rem;
+            border-radius: 16px;
+            border: 1px solid #ffe3e8;
+        }
+        .stat-num {
+            font-size: 1.6rem;
+            font-weight: bold;
+            color: var(--pink-accent);
+            display: block;
+        }
+        .stat-lbl {
+            font-size: 0.85rem;
+            color: #777;
+        }
+
+        /* Interactive Balloon Pop Game */
+        .balloon-zone {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+            margin-top: 1.5rem;
+        }
+        .balloon {
+            width: 70px;
+            height: 85px;
+            background: var(--pink-medium);
+            border-radius: 50% 50% 50% 50% / 40% 40% 60% 60%;
+            cursor: pointer;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            transition: all 0.2s ease;
+            box-shadow: inset -6px -6px 0px rgba(0,0,0,0.08);
+            animation: floatSlightly 3s infinite alternate;
+        }
+        .balloon:nth-child(2) { background: #ffafcc; animation-delay: 0.5s; }
+        .balloon:nth-child(3) { background: #bde0fe; animation-delay: 1s; }
+        .balloon:nth-child(4) { background: #cdb4db; animation-delay: 1.5s; }
+        
+        .balloon::after {
+            content: "";
+            position: absolute;
+            bottom: -8px;
+            left: 32px;
+            border-left: 4px solid transparent;
+            border-right: 4px solid transparent;
+            border-top: 8px solid currentColor;
+            opacity: 0.7;
+        }
+        .balloon.popped {
+            transform: scale(0);
+            opacity: 0;
+            pointer-events: none;
+        }
+        @keyframes floatSlightly {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(-8px); }
+        }
+        .pop-reveal {
+            margin-top: 1.5rem;
+            min-height: 24px;
+            font-weight: 600;
+            color: var(--pink-dark);
+            font-style: italic;
         }
 
         /* Interactive Cake Section */
         .cake-container {
-            margin: 2rem 0;
+            margin: 1.5rem 0;
         }
-
         .cake-emoji {
-            font-size: 5rem;
+            font-size: 5.5rem;
             display: inline-block;
             position: relative;
+            user-select: none;
         }
-
         .candles {
-            font-size: 1.5rem;
+            font-size: 1.6rem;
             position: absolute;
-            top: -25px;
-            left: 20px;
-            letter-spacing: 5px;
-            transition: opacity 0.5s;
+            top: -28px;
+            left: 22px;
+            letter-spacing: 4px;
+            transition: all 0.4s ease;
         }
-
         .blow-btn {
             background-color: var(--pink-dark);
             color: white;
             border: none;
-            padding: 0.75rem 2rem;
+            padding: 0.8rem 2.2rem;
             border-radius: 50px;
             font-weight: bold;
             font-size: 1rem;
             cursor: pointer;
-            margin-top: 10px;
             transition: all 0.3s;
-            box-shadow: 0 5px 15px rgba(255, 107, 139, 0.3);
+            box-shadow: 0 6px 20px rgba(255, 107, 139, 0.3);
         }
-
         .blow-btn:hover { 
             background-color: var(--pink-accent); 
-            transform: scale(1.05);
+            transform: scale(1.06);
         }
 
-        /* Polaroid Photo Section */
+        /* Polaroid Photo Display */
         .polaroid-frame {
             background: white;
-            padding: 15px 15px 40px 15px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-            transform: rotate(-3deg);
-            max-width: 320px;
-            margin: 2rem auto;
-            border: 1px solid #eee;
+            padding: 16px 16px 45px 16px;
+            box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+            transform: rotate(-2.5deg);
+            max-width: 300px;
+            margin: 2.5rem auto;
+            border: 1px solid #f3f3f3;
             transition: transform 0.4s ease;
         }
         .polaroid-frame:hover {
-            transform: rotate(0deg) scale(1.05);
+            transform: rotate(0deg) scale(1.06);
         }
         .polaroid-img {
             width: 100%;
-            height: 280px;
-            background-color: #ffeef2;
+            height: 260px;
+            background-color: #fff0f3;
             object-fit: cover;
             border-radius: 4px;
             display: flex;
@@ -181,8 +248,6 @@
             justify-content: center;
             color: var(--pink-dark);
             font-weight: 500;
-            font-size: 0.9rem;
-            border: 1px solid rgba(0,0,0,0.02);
         }
         .polaroid-caption {
             font-family: 'Courier New', Courier, monospace;
@@ -192,96 +257,91 @@
             color: #555;
         }
 
-        /* The Secret Message Box */
+        /* Letter Presentation Box */
         .gift-box {
-            font-size: 5rem;
+            font-size: 5.5rem;
             cursor: pointer;
             transition: transform 0.3s;
             display: inline-block;
             user-select: none;
+            animation: wiggle 2.5s infinite;
         }
-
+        @keyframes wiggle {
+            0%, 100% { transform: rotate(0); }
+            50% { transform: rotate(4deg); }
+        }
         .gift-box:hover {
-            transform: scale(1.1) rotate(5deg);
+            transform: scale(1.15);
         }
-
         .hidden-message {
             display: none;
             margin-top: 1.5rem;
             font-size: 1.1rem;
             line-height: 1.7;
             color: #444;
-            background: #fff5f7;
-            padding: 1.8rem;
-            border-radius: 15px;
+            background: #fff8f9;
+            padding: 2rem;
+            border-radius: 20px;
             border-left: 6px solid var(--pink-dark);
             text-align: left;
-            animation: fadeIn 0.8s ease-in-out forwards;
-            box-shadow: inset 0 2px 10px rgba(0,0,0,0.02);
+            box-shadow: inset 0 2px 8px rgba(0,0,0,0.02);
         }
 
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(10px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        /* Cute Reasons Grid */
+        /* Bullet Points Override */
         .reasons-list {
             list-style: none;
             text-align: left;
-            padding: 0 1rem;
         }
-
         .reasons-list li {
-            margin: 1rem 0;
+            margin: 1.1rem 0;
             font-size: 1.1rem;
             display: flex;
             align-items: center;
+            gap: 12px;
         }
 
-        .reasons-list li::before {
-            content: "💖";
-            margin-right: 12px;
-            font-size: 1.2rem;
-        }
-
-        /* Big Sweet Banner */
         .sweet-alert {
             font-weight: bold;
             color: var(--pink-accent);
-            font-size: 1.4rem;
+            font-size: 1.3rem;
             margin-top: 1.5rem;
-            animation: fadeIn 0.5s ease-in;
+            animation: popIn 0.4s ease-out;
+        }
+        @keyframes popIn {
+            0% { transform: scale(0.8); opacity: 0; }
+            100% { transform: scale(1); opacity: 1; }
         }
 
     </style>
 </head>
 <body>
 
-    <!-- Hidden audio element if you want background music -->
-    <!-- Just put an audio file named music.mp3 in the same github folder, or leave it to use the built-in system -->
-    <audio id="bgMusic" src="music.mp3" loop></audio>
-
-    <!-- Floating Background Hearts -->
     <div class="hearts-container" id="heartsContainer"></div>
 
     <div class="container">
         
-        <!-- Header -->
+        <!-- Main Elegant Heading -->
         <header>
             <h1>✨ Happy Birthday, Ritija! ✨</h1>
             <h2>Sweet 16 looks absolutely beautiful on you! 🎂</h2>
         </header>
 
-        <!-- Music Button Toggle -->
-        <div class="audio-wrapper">
-            <button class="music-btn" id="musicBtn" onclick="toggleMusic()">🎵 Play Birthday Music</button>
+        <!-- NEW COMPONENT: Sweet 16 Dashboard Stats -->
+        <div class="section-card">
+            <h3>📊 Ritija's Lifetime Excellence</h3>
+            <p style="color:#777; font-size:0.95rem;">Here is exactly how long you have been spreading brightness into the world:</p>
+            <div class="stats-grid">
+                <div class="stat-box"><span class="stat-num">16</span><span class="stat-lbl">Years Old Today</span></div>
+                <div class="stat-box"><span class="stat-num">192</span><span class="stat-lbl">Months of Awesomeness</span></div>
+                <div class="stat-box"><span class="stat-num">5,844</span><span class="stat-lbl">Days of Being Cute</span></div>
+                <div class="stat-box"><span class="stat-num">Infinite</span><span class="stat-lbl">Amount of Love</span></div>
+            </div>
         </div>
 
         <!-- Section 1: The Birthday Cake Interaction -->
         <div class="section-card">
             <h3>Make a Wish! 🕯️</h3>
-            <p style="color: #888; font-size: 0.95rem; margin-bottom: 12px;">Click the button below to blow out your candles!</p>
+            <p style="color: #888; font-size: 0.9rem; margin-bottom: 12px;">Click the button below to blow out your candles!</p>
             <div class="cake-container">
                 <div class="cake-emoji">
                     <span class="candles" id="candles">🔥🕯️🔥</span>
@@ -292,32 +352,44 @@
             <p id="wishText" class="sweet-alert" style="display:none;">🎉 May all your sweetest dreams come true today! 🌟</p>
         </div>
 
-        <!-- Photo Section: Polaroid frame -->
-        <!-- TO ADD A PHOTO: Change src="your-image.jpg" below to point to your picture file name! -->
+        <!-- NEW COMPONENT: Pop-A-Balloon Virtual Compliment Machine -->
+        <div class="section-card">
+            <h3>🎈 Pop a Birthday Balloon!</h3>
+            <p style="color: #888; font-size: 0.9rem;">Tap the balloons to reveal hidden sweet messages just for you!</p>
+            <div class="balloon-zone">
+                <div class="balloon" onclick="popBalloon(this, 'You have the prettiest laugh ever! ✨')">🎈</div>
+                <div class="balloon" onclick="popBalloon(this, 'You make my world so incredibly happy. 💕')">🎈</div>
+                <div class="balloon" onclick="popBalloon(this, 'Smart, cute, and turning 16! 🌟')">🎈</div>
+                <div class="balloon" onclick="popBalloon(this, 'The absolute best person in existence! 👑')">🎈</div>
+            </div>
+            <div class="pop-reveal" id="popRevealText">Click a balloon above! 😊</div>
+        </div>
+
+        <!-- Polaroid Framing Design -->
+        <!-- TO ADD IMAGE: Just name your image file "ritija.jpg" in GitHub and change src="ritija.jpg" below! -->
         <div class="polaroid-frame">
             <img class="polaroid-img" src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 24 24' fill='%23ff6b8b'><path d='M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z'/></svg>" alt="Ritija's Birthday Pic" id="displayPic">
             <div class="polaroid-caption">Ritija ✨ Birthday Girl</div>
         </div>
 
-        <!-- Section 2: Why You Are So Special -->
+        <!-- Section 2: Core Reasons List -->
         <div class="section-card">
             <h3>To My Favorite Person... 💕</h3>
-            <p style="margin-bottom: 1.5rem; color: #666; font-size: 1.05rem;">Here are just a few reasons why you mean the absolute world to me:</p>
+            <p style="margin-bottom: 1.5rem; color: #666;">Here are just a few reasons why you mean the absolute world to me:</p>
             <ul class="reasons-list">
-                <li>Your smile literally brightens up my entire day.</li>
-                <li>You have the kindest, cutest, most amazing heart.</li>
-                <li>You make every single ordinary moment feel completely magical.</li>
-                <li>You're turning 16 today, and you grow more wonderful every year.</li>
+                <li>💖 Your smile literally brightens up my entire day.</li>
+                <li>💖 You have the kindest, cutest, most amazing heart.</li>
+                <li>💖 You make every single ordinary moment feel completely magical.</li>
+                <li>💖 You're turning 16 today, and you grow more wonderful every year.</li>
             </ul>
         </div>
 
         <!-- Section 3: The Secret Surprise Letter Box -->
         <div class="section-card">
             <h3>Tap Your Birthday Gift! 🎁</h3>
-            <p style="color: #888; font-size: 0.95rem; margin-bottom: 15px;">(Click the box to open your special letter)</p>
+            <p style="color: #888; font-size: 0.9rem; margin-bottom: 15px;">(Click the box to open your special letter)</p>
             <div class="gift-box" id="giftBox" onclick="openGift()">🎁</div>
             
-            <!-- Edit your deep letter right here! -->
             <div class="hidden-message" id="secretLetter">
                 <strong>Dearest Ritija,</strong><br><br>
                 Happy official 16th Birthday! 🎉 I wanted to make something entirely unique just for you to show you how completely special you are. <br><br>
@@ -326,54 +398,55 @@
             </div>
         </div>
 
-        <p style="color: var(--pink-dark); font-weight: 600; margin-top: 3rem; font-size: 1.1rem;">Made with love just for Ritija ✨</p>
+        <p style="color: var(--pink-dark); font-weight: 600; margin-top: 3rem;">Made with absolute love just for Ritija ✨</p>
 
     </div>
 
-    <!-- JavaScript for Dynamic Magic Effects -->
     <script>
-        // 1. Generate Random Floating Hearts
+        // 1. Floating Hearts Setup
         const heartsContainer = document.getElementById('heartsContainer');
-        const heartEmojis = ['💖', '💝', '✨', '💕', '🌸', '❤️', '⭐️'];
+        const heartEmojis = ['💖', '💝', '✨', '💕', '🌸', '❤️', '🌸', '🍭'];
 
         function createHeart() {
             const heart = document.createElement('div');
             heart.classList.add('heart');
             heart.innerText = heartEmojis[Math.floor(Math.random() * heartEmojis.length)];
             heart.style.left = Math.random() * 100 + 'vw';
-            heart.style.animationDuration = (Math.random() * 3 + 4) + 's'; // 4s to 7s
+            heart.style.animationDuration = (Math.random() * 3 + 4) + 's'; 
             heart.style.fontSize = (Math.random() * 1.2 + 0.8) + 'rem';
             
             heartsContainer.appendChild(heart);
-
-            // Remove heart after it floats away
-            setTimeout(() => {
-                heart.remove();
-            }, 7000);
+            setTimeout(() => { heart.remove(); }, 7000);
         }
+        setInterval(createHeart, 300);
 
-        // Keep generating hearts continuously
-        setInterval(createHeart, 350);
-
-        // 2. Interactive Cake Blow Routine with Explosion Effect
+        // 2. Blow Candles Animation Routine
         function blowCandles() {
             const candles = document.getElementById('candles');
             const wishText = document.getElementById('wishText');
-            
-            // Change the fire candles to standard unlit candles
+            candles.innerText = '残留🕯️🕯️🕯️'; // Unlit version
             candles.innerText = '🕯️🕯️🕯️';
-            candles.style.opacity = '0.7';
-            
-            // Show the wish congratulations text
+            candles.style.opacity = '0.6';
             wishText.style.display = 'block';
             
-            // Trigger a massive explosion of hearts instantly
-            for(let i=0; i<35; i++) {
-                setTimeout(createHeart, i * 40);
+            // Blast bursts of hearts
+            for(let i=0; i<40; i++) {
+                setTimeout(createHeart, i * 30);
             }
         }
 
-        // 3. Open Gift Box Reveal Routine
+        // 3. Balloon Pop Engine
+        function popBalloon(element, message) {
+            element.classList.add('popped');
+            document.getElementById('popRevealText').innerText = message;
+            
+            // Localized micro-burst of elements
+            for(let i=0; i<8; i++) {
+                setTimeout(createHeart, i * 20);
+            }
+        }
+
+        // 4. Open Gift Frame
         function openGift() {
             const gift = document.getElementById('giftBox');
             const letter = document.getElementById('secretLetter');
@@ -384,28 +457,9 @@
             } else {
                 letter.style.display = 'block';
                 gift.innerText = '🔓💝';
-                
-                // Scroll down smoothly to read the letter
                 setTimeout(() => {
                     letter.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
                 }, 150);
-            }
-        }
-
-        // 4. Music Playback Control Function
-        function toggleMusic() {
-            const music = document.getElementById('bgMusic');
-            const btn = document.getElementById('musicBtn');
-            
-            if (music.paused) {
-                music.play().then(() => {
-                    btn.innerText = "⏸️ Pause Music";
-                }).catch(err => {
-                    alert("Add a music.mp3 file to your folder to play background music tracks!");
-                });
-            } else {
-                music.pause();
-                btn.innerText = "🎵 Play Birthday Music";
             }
         }
     </script>
